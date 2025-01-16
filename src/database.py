@@ -143,5 +143,4 @@ def recalculate_metrics():
 
 if __name__ == '__main__':
     init_database('/home/denis/Загрузки/TUAB')
-    time.sleep(1000000000)
     recalculate_metrics()

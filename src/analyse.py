@@ -50,8 +50,8 @@ def compute_channel_distribution(data_path):
     return channel_distribution
 
 
-if __name__ == '__main__':
-    channel_distribution = compute_channel_distribution('/home/denis/Загрузки/TUAB')
+def show_channels_distribution(data_path, save_path):
+    channel_distribution = compute_channel_distribution(data_path)
     channel_df = pd.DataFrame(channel_distribution.items(), columns=["Channel", "Count"])
     channel_df = channel_df.sort_values(by="Count", ascending=False)
     plt.figure(figsize=(20, 5))
@@ -61,5 +61,9 @@ if __name__ == '__main__':
     plt.ylabel("Freq")
     plt.title("Channel freq distribution")
     plt.tight_layout()
-    plt.savefig("results/tuab_data_channel_freq.png")
+    plt.savefig(save_path)
     plt.show()
+
+
+if __name__ == '__main__':
+    show_channels_distribution('/home/denis/Загрузки/TUAB', "results/tuab_data_channel_freq.png")

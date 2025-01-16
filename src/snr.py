@@ -92,5 +92,5 @@ def aggregate_snr():
 
 
 if __name__ == '__main__':
-    # calculate_snr('/home/denis/Загрузки/TUAB')
+    calculate_snr('/home/denis/Загрузки/TUAB')
     print(aggregate_snr())
